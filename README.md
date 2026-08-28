@@ -26,7 +26,8 @@ Define out of scope functionalities.
                                    Timestamp,
                                    title 
                                        }
-                    
+
+        - Define Main entities in the problem and relationship between these entities. 
         - Data Base choice : Are we using a Relational db or a Non relational db based on CAP Priorities 
             - Relational Data base 
                 - when there are multiple structured tables / data we need to store
@@ -36,7 +37,7 @@ Define out of scope functionalities.
             - Non Relational DB. 
                 - example: CassandraDb, NoSQL, DynamoDb, MongoDb 
 
-3. High Level Design
+2. High Level Design
    - Common Components:
                 - Client/ User 
                 - CDN 
@@ -50,7 +51,7 @@ Define out of scope functionalities.
                 - Authentication and Authorization (OAuth2/ JWT/ role based access control) 
                 - Telemetry and Observability : Prometheus, Grafana. 
   
-4. Deep Dives.
+3. Deep Dives.
         Scaling: 
 - Scaling Read performance : Discuss Cache (Redis) 
 - Scaling Write performance : Discuss Message queues 
@@ -62,5 +63,5 @@ Define out of scope functionalities.
 <img width="3756" height="4410" alt="image" src="https://github.com/user-attachments/assets/7e7b27ba-e4a4-41b0-973c-78b0b5375a82" />
 
 # List : 
-# 1. Design Top K heavy hitters
-# 2. Design Leet Code 
+# 1. Design Top K heavy hitters - HARD
+# 2. Design Leet Code - MEDIUM 
