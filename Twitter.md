@@ -1,6 +1,6 @@
 Problem: Design Twitter - MEDIUM
 
-https://excalidraw.com/#json=BHbuGo8FSACEdR65ZFCm0,WfAuJsGEk2Cs4ivtZt0nlw
+https://excalidraw.com/#json=IMpciRrD5kiXw6nmgK-xv,_cNvca_oygUsH64ymxkvTg 
 
-<img width="4678" height="4407" alt="image" src="https://github.com/user-attachments/assets/4605a533-3150-47d6-b5f3-66346e435196" />
+<img width="4678" height="4582" alt="image" src="https://github.com/user-attachments/assets/cc5cab01-cba4-4cdf-a517-a659a69bb3da" />
 
