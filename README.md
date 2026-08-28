@@ -1,6 +1,63 @@
 # systemdesign
+ Skeleton : 
+1. Gather Requirements and Back of envelope Calculations
+    - Functional requirements. 
+    - Non functional requirements 
+        - Scalability 
+        - Availability 
+        - Latency and performance 
+    - Back of envelope Estimation:
+        - number of daily active users 
+        - Throughput : 
+                calculate Reads and writes per day;  
+                Read to write ratio 
+        - CAP Tradeoff : 
+            - Are we priortitizing Availability, what should be the availability 
+            - % availability we're looking at.  
+        - Discuss Storage Capacities for the use case. 
 
-{"type":"excalidraw/clipboard","elements":[{"id":"cj7zCZZTCOzonrGRJFo_V","type":"text","x":256.81632896117463,"y":-129.73832412210595,"width":1232.119140625,"height":1450,"angle":0,"strokeColor":"#1e1e1e","backgroundColor":"transparent","fillStyle":"solid","strokeWidth":2,"strokeStyle":"solid","roughness":1,"opacity":100,"groupIds":[],"frameId":null,"index":"b00","roundness":null,"seed":1507036093,"version":2681,"versionNonce":592674259,"isDeleted":false,"boundElements":null,"updated":1787873367146,"link":null,"locked":false,"text":"\n\n Skeleton : \n1. Gather Requirements and Back of envelope Calculations\n    - Functional requirements. \n    - Non functional requirements \n        - Scalability \n        - Availability \n        - Latency and performance \n    - Back of envelope Estimation:\n        - number of daily active users \n        - Throughput : \n                calculate Reads and writes per day;  \n                Read to write ratio \n        - CAP Tradeoff : \n            - Are we priortitizing Availability, what should be the availability \n            - % availability we're looking at.  \n        - Discuss Storage Capacities for the use case. \n    \n2. API Design and Database Design \n        - API : READ AND WRITE \n                GET /v1/service1 \n                       Query Params : {\n                                   UserId, \n                                   Timestamp,\n                                   title \n                                       }\n                    \n        - Data Base choice : Are we using a Relational db or a Non relational db based on CAP Priorities \n            - Relational Data base \n                - when there are multiple structured tables / data we need to store\n                - when there is joins required between the data for this use case. \n                - example : SQL, Postgresql \n\n            - Non Relational DB. \n                - example: CassandraDb, NoSQL, DynamoDb, MongoDb \n\n3. High Level Design\n       Common Components:\n                - Client/ User \n                - CDN \n                - Load balancer \n                - API Gateway \n                - Microservices \n                - Data base and Cache \n       Uncommon Components: \n                - Message queues : to handle inflow of requests \n                - rate limiter\n                - Authentication and Authorization (OAuth2/ JWT/ role based access control) \n                - Telemetry and Observability : Prometheus, Grafana. \n  \n4. Deep Dives.\n        Scaling: \n- Scaling Read performance : Discuss Cache (Redis) \n- Scaling Write performance : Discuss Message queues \n- Scaling Database : Discuss Implementing Replicas of data base (also for fault tolerance); Rate limiters and circuit breakers \n\n    Discuss any tradeoffs (CAP) ","fontSize":20,"fontFamily":5,"textAlign":"left","verticalAlign":"top","containerId":null,"originalText":"\n\n Skeleton : \n1. Gather Requirements and Back of envelope Calculations\n    - Functional requirements. \n    - Non functional requirements \n        - Scalability \n        - Availability \n        - Latency and performance \n    - Back of envelope Estimation:\n        - number of daily active users \n        - Throughput : \n                calculate Reads and writes per day;  \n                Read to write ratio \n        - CAP Tradeoff : \n            - Are we priortitizing Availability, what should be the availability \n            - % availability we're looking at.  \n        - Discuss Storage Capacities for the use case. \n    \n2. API Design and Database Design \n        - API : READ AND WRITE \n                GET /v1/service1 \n                       Query Params : {\n                                   UserId, \n                                   Timestamp,\n                                   title \n                                       }\n                    \n        - Data Base choice : Are we using a Relational db or a Non relational db based on CAP Priorities \n            - Relational Data base \n                - when there are multiple structured tables / data we need to store\n                - when there is joins required between the data for this use case. \n                - example : SQL, Postgresql \n\n            - Non Relational DB. \n                - example: CassandraDb, NoSQL, DynamoDb, MongoDb \n\n3. High Level Design\n       Common Components:\n                - Client/ User \n                - CDN \n                - Load balancer \n                - API Gateway \n                - Microservices \n                - Data base and Cache \n       Uncommon Components: \n                - Message queues : to handle inflow of requests \n                - rate limiter\n                - Authentication and Authorization (OAuth2/ JWT/ role based access control) \n                - Telemetry and Observability : Prometheus, Grafana. \n  \n4. Deep Dives.\n        Scaling: \n- Scaling Read performance : Discuss Cache (Redis) \n- Scaling Write performance : Discuss Message queues \n- Scaling Database : Discuss Implementing Replicas of data base (also for fault tolerance); Rate limiters and circuit breakers \n\n    Discuss any tradeoffs (CAP) ","autoResize":true,"lineHeight":1.25}],"files":{}}
+Define out of scope functionalities. 
+
+2. API Design and Database Design 
+        - API : READ AND WRITE 
+                GET /v1/service1 
+                       Query Params : {
+                                   UserId, 
+                                   Timestamp,
+                                   title 
+                                       }
+                    
+        - Data Base choice : Are we using a Relational db or a Non relational db based on CAP Priorities 
+            - Relational Data base 
+                - when there are multiple structured tables / data we need to store
+                - when there is joins required between the data for this use case. 
+                - example : SQL, Postgresql 
+
+            - Non Relational DB. 
+                - example: CassandraDb, NoSQL, DynamoDb, MongoDb 
+
+3. High Level Design
+       Common Components:
+                - Client/ User 
+                - CDN 
+                - Load balancer 
+                - API Gateway 
+                - Microservices 
+                - Data base and Cache 
+       Uncommon Components: 
+                - Message queues : to handle inflow of requests 
+                - rate limiter
+                - Authentication and Authorization (OAuth2/ JWT/ role based access control) 
+                - Telemetry and Observability : Prometheus, Grafana. 
+  
+4. Deep Dives.
+        Scaling: 
+- Scaling Read performance : Discuss Cache (Redis) 
+- Scaling Write performance : Discuss Message queues 
+- Scaling Database : Discuss Implementing Replicas of data base (also for fault tolerance); Rate limiters and circuit breakers 
+
+    Discuss any tradeoffs (CAP) 
+
 
 <img width="3756" height="4410" alt="image" src="https://github.com/user-attachments/assets/7e7b27ba-e4a4-41b0-973c-78b0b5375a82" />
 
