@@ -37,14 +37,14 @@ Define out of scope functionalities.
                 - example: CassandraDb, NoSQL, DynamoDb, MongoDb 
 
 3. High Level Design
-       Common Components:
+   - Common Components:
                 - Client/ User 
                 - CDN 
                 - Load balancer 
                 - API Gateway 
                 - Microservices 
                 - Data base and Cache 
-       Uncommon Components: 
+   - Uncommon Components: 
                 - Message queues : to handle inflow of requests 
                 - rate limiter
                 - Authentication and Authorization (OAuth2/ JWT/ role based access control) 
